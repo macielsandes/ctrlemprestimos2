@@ -4,8 +4,12 @@
 
 @section('content')
 
-<h1>listagem de usuario</h1>
-(<a href="{{ route('users.create') }}">+</a>)
+<h1>listagem de usuario (<a href="{{ route('users.create') }}">+</a>)</h1>
+
+<form action="{{ route('users.index') }}" method="get">
+    <input type="text" name ="search" placeholder="Pesquisar">  
+    <button>Pesquisar</button>
+</form>
 
 <ul>
     @foreach ( $users as $user )

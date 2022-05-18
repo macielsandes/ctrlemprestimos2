@@ -7,11 +7,22 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
-{
-    public function index()
+{   
+
+    protected $model;
+
+    public function __construct(User $user)
     {
-        $users = User::get();
-               
+        $this->model = $user;
+    }
+    
+    public function index(Request $request)
+    {
+        $users = $this->model
+                ->getUsers(
+                    search: $request ->search ?? ''
+                );
+        
         return view ('users.index', compact('users'));
     }
 
