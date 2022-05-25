@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\{
-    UserController
+    UserController,
+    MaterialController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,11 @@ Route::get('/users/create', [UserController::class, 'create']) -> name('users.cr
 Route::post('/users', [UserController::class, 'store']) -> name('users.store');
 Route::get('/users/{id}', [UserController::class, 'show'])-> name('users.show');
 
+
+Route::get('/materials/create', [MaterialController::class, 'create'])-> name('materials.create');
+Route::get('/materials', [MaterialController::class, 'index'])-> name('materials.index');
+Route::post('/materials', [MaterialController::class, 'store'])-> name('materials.store');
+Route::get('/materials/{id}', [MaterialController::class, 'show'])-> name('materials.show');
 
 Route::get('/', function () {
     return view('welcome');
