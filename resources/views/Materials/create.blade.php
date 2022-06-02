@@ -6,7 +6,6 @@
 
 <h1>Novo Material</h1>
 
-@include('includes.validations-form')
 
 <form action="{{ route('materials.store') }}" method="post">
     @csrf

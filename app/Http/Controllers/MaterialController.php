@@ -34,9 +34,9 @@ class MaterialController extends Controller
        return view('materials.create'); 
     }
 
-    //Controle que realiza o cadastro do usuario
+    //Evia dados para o cadastro de materiais
     public function store(StoreUpdateMaterialFormRequest $request){
-      //Recebe todos dados do formulario, porem uma verificação propria de criptografa no campo senha
+      //Recebe todos dados do formulario,
       $data = $request->all(); 
       
       Material::create($data);

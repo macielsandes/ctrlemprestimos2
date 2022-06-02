@@ -11,7 +11,6 @@ class Material extends Model
         'descricao',
         'serial',
         'quantidade',
-        'nota',
     ];
 
     public function getMaterial(string|null $search = null)

@@ -14,10 +14,12 @@
 <ul>
     @foreach ( $materials as $material )
         <li>
-            {{ $material->name }} - 
-            {{ $material->email }}
-                <a href="{{ route('material.edit', $material->id) }}">Editar></a>
-                <a href="{{ route('material.show', $material->id) }}">Detalhes></a>
+            {{ $material->descricao }} - 
+            {{ $material->serie }} -
+            {{ $material->quantidade }} - 
+            {{ $material->nota}} - 
+                <a href="{{ route('materials.edit', $material->id) }}">Editar></a>
+                <a href="{{ route('materials.show', $material->id) }}">Detalhes></a>
         </li>
     @endforeach
 </ul>

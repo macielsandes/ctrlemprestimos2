@@ -24,10 +24,9 @@ class StoreUpdateMaterialFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'descrição' => 'required|string|max:255|min:3',
+            'descricao' => 'required|string|max:255',
             'serial' => 'string|max:100|min:3',
-            'quantidade' => 'string|max:100|min:3',
-
+            'quantidade' => 'required',
         ];
     }
 }
