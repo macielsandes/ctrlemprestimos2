@@ -7,22 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
 {
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    
     protected $fillable = [
         'descricao',
-        'serial',
+        'numserial',
         'quantidade',
     ];
-
-    public function getMaterial(string|null $search = null)
+    
+    //classe para uma pesquisa
+    public function getMaterials(string|null $search = null)
     {
-       $material = $this->where(function ($query) use ($search){
+       $materials = $this->where(function ($query) use ($search){
             if ($search){
                 $query->where('serial', $search);
                 $query->orwhere('descricao', 'LIKE', "%{$search}%");
             }
         })->get();    
 
-        return $material;
+        return $materials;
     }
  
+   
 }

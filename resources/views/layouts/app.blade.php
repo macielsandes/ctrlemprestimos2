@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/scripts.js"></script>
         
-    <title>@yield('title') - Controle de Emprestimos</title>
+    <title>@yield('title') - Controle de Empréstimos</title>
 </head>
 <body>
 <header>
@@ -38,25 +38,17 @@
                         <a class="nav-link" href="/materials">Materiais</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/emprestimo">Empréstimos</a>
+                        <a class="nav-link" href="/emprestimo">Registrar Empréstimo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/devolucao">Devolução</a>
+                        <a class="nav-link" href="/devolucao">Registrar Devolução</a>
                     </li>                        
                 </ul>
-            </div> 
-            <div>
-                <form action="{{ route('materials.index') }}" method="get">
-                    <input type="text" name ="search" placeholder="Pesquisar">  
-                    <button>Pesquisar</button>
-                </form>
-            </div>
                 <div class="d-grid gap-1 d-md-flex justify-content-md-end">
                     <button class="btn btn-primary" type="submit">Sair</button> 
-                </div>                 
-            </div>                
-            </div>
-         </div> 
+                </div>        
+            </div>                       
+        </div>             
     </nav>
 </helder>   
 
@@ -64,13 +56,14 @@
         @yield('content')        
     </div>
 
-<!--Define o Rodape da pagina-->    
-<div class="container">
-       <footer>
+
+    <footer>
+    <br>
+    <!--Define o Rodape da pagina-->    
+    <div class="container">
            <div>
                <p> CTRL EMPRÉSTIMOS - SISTEMA DE CONTROLE EMPRÉSTIMOS;2022</p>
            </div>   
        </footer>
-    </div>
 </body>
 </html>

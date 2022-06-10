@@ -15,9 +15,8 @@
     @foreach ( $materials as $material )
         <li>
             {{ $material->descricao }} - 
-            {{ $material->serie }} -
-            {{ $material->quantidade }} - 
-            {{ $material->nota}} - 
+            {{ $material->serie }} 
+            {{ $material->quantidade }}
                 <a href="{{ route('materials.edit', $material->id) }}">Editar></a>
                 <a href="{{ route('materials.show', $material->id) }}">Detalhes></a>
         </li>

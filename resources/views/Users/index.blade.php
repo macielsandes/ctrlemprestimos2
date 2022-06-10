@@ -13,15 +13,18 @@
 
 <table class="table">
     <table class="table">
+        <thead class="thead-dark">
         <thead>
             <tr>
+                <th scope="col">id</th>      
                 <th>Usuário</th>
                 <th>E-mail</th>
             </tr>
         </thead>
         <tbody> 
             @foreach ( $users as $user )                           
-            <tr>                
+            <tr> 
+                <td> {{ $user->id }}</td>               
                 <td> {{ $user->name }}</td>
                 <td> {{ $user->email }}</td>
                 <td> <a href="{{ route('users.edit', $user->id) }}">Editar></a> </td> 

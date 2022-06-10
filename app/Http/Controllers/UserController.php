@@ -11,11 +11,13 @@ class UserController extends Controller
 
     protected $model;
 
+    // criando um construtor
     public function __construct(User $user)
     {
         $this->model = $user;
     }
     
+    //Controle que direciona para pagina inicial de usuario
     public function index(Request $request)
     {
         $users = $this->model
@@ -25,7 +27,7 @@ class UserController extends Controller
         
         return view ('users.index', compact('users'));
     }
-
+    //control para mostrar usuario
     public function show($id)
     {
         //$user = User::where ('id',$id) ->first();
@@ -40,11 +42,12 @@ class UserController extends Controller
     {
        return view('users.create'); 
     }
+    
     //Enviando dados cadastrados para o banco de dados
     public function store(StoreUpdateUserFormRequest $request)
     {   
         //Recebe todos dados do formulario, porem uma verificação propria de criptografa no campo senha
-        $data = $request->all(); 
+        ($data = $request->all()); 
         $data['password'] = bcrypt($request->password);
         
         User::create($data);
