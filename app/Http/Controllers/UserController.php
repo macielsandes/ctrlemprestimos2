@@ -27,14 +27,14 @@ class UserController extends Controller
         
         return view ('users.index', compact('users'));
     }
-    //control para mostrar usuario
+    //controle para mostrar usuario
     public function show($id)
     {
         //$user = User::where ('id',$id) ->first();
 
         if(!$user= User::find($id))
            return redirect() -> route('users.index');
-
+    //se for passado um ID de um material valido, direciona para a tela de edição de usuario
         return view('users.show', compact('user'));
     }
     

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class MaterialController extends Controller
 {
 
-   protected $model;
+   protected $model; 
    
    // criando um construtor
    public function __construct(Material $material)
@@ -32,13 +32,13 @@ class MaterialController extends Controller
    //controle para mostrar material
    public function show($id)
    {
-      if(!$materials= Material::find($id))
-          
-         //se for passado um ID de um material invalido, direciona para tela inicial
-         return redirect() -> route('materials.index');
+      if(!$materials= Material::find($id))          
+         
+      //se for passado um ID de um material invalido, direciona para tela inicial
+      return redirect() -> route('materials.index');
 
-         //se for passado um ID de um material valido, direciona para a tela de edição de material  
-        return view('materials.show', compact('material'));
+      //se for passado um ID de um material valido, direciona para a tela de edição de material  
+      return view('materials.show', compact('material'));
    }
 
    //Controle para a edição de material
@@ -48,14 +48,12 @@ class MaterialController extends Controller
     }
 
     //Enviando dados para o cadastrados para o banco de dados
-    public function store(StoreUpdateMaterialFormRequest $request){      
+    public function store(Request $request){      
      
-      //Recebe dados do formulario,
-      ($data = $request->all());
-      
-      dd(Material::create($data));
-      
-         return redirect()-> route ('materials.index');
+      //Recebe dados do formulario,     
+      $material= Material::get();
+            
+      return redirect()-> route ('materials.index');
     }
 
 }

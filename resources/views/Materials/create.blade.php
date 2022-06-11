@@ -4,11 +4,11 @@
 
 @section('content')
 
-<div>  
-    <form action="{{ route('materials.store') }}" method="post">
-        @csrf
-        @include('materials._patials.form')
-    </form>
-</div>
+<h1>Novo Material</h1>
+
+<form action="{{ route('materials.store') }}" method="post">
+    @csrf
+    @include('materials._patials.form')
+</form>
 
 @endsection

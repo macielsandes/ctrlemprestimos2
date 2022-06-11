@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('materials', function (Blueprint $table) {
-            $table->id();
-            $table->string('descricao');
-            $table->string('numserie');
-            $table->integer('quantidade');
+            $table->bigIncrements('id');
+            $table->string('descricao',255);
+            $table->string('numserie')->unique();
+            $table->integer('numpatrimonio'); 
+            $table->integer('qtde');
             $table->timestamps();
         });
     }

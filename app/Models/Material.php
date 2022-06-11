@@ -7,17 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
 {
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    protected  $table = 'materials';
     
-    protected $fillable = [
+    protected $fillable = [ 
         'descricao',
         'numserial',
-        'quantidade',
+        'numpatrimonio',
+        'qtde',
     ];
     
     //classe para uma pesquisa

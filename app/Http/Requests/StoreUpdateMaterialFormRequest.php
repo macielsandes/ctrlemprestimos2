@@ -25,8 +25,9 @@ class StoreUpdateMaterialFormRequest extends FormRequest
     {
         return [
             'descricao' => 'required|string|max:255',
-            'serial' => 'string|max:100|min:3',
-            'quantidade' => 'required',
+            'numserie' => 'string|max:100',
+            'numpatrimonio' => 'numeric',
+            'qtde' => 'required'|'numeric',
         ];
     }
 }

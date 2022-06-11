@@ -14,6 +14,7 @@ Route::get('/users/create', [UserController::class, 'create']) -> name('users.cr
 Route::post('/users', [UserController::class, 'store']) -> name('users.store');
 Route::get('/users/{id}', [UserController::class, 'show'])-> name('users.show');
 
+Route::get('/materials/{id}/edit', [MaterialController::class, 'edit'])-> name('materials.edit');
 Route::get('/materials', [MaterialController::class, 'index'])-> name('materials.index');
 Route::get('/materials/create', [MaterialController::class, 'create'])-> name('materials.create');
 Route::post('/materials', [MaterialController::class, 'store'])-> name('materials.store');

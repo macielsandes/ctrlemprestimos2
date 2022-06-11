@@ -4,21 +4,20 @@
 
 @section('content')
 
-<h1>listagem de usuario (<a href="{{ route('users.create') }}">+</a>)</h1>
+<div class="container">
+<h1>Listagem de usuários (<a href="{{ route('users.create') }}">+</a>)</h1>
 
 <form action="{{ route('users.index') }}" method="get">
     <input type="text" name ="search" placeholder="Pesquisar">  
     <button>Pesquisar</button>
 </form>
 
-<table class="table">
-    <table class="table">
-        <thead class="thead-dark">
+ <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">id</th>      
-                <th>Usuário</th>
-                <th>E-mail</th>
+                <th scope="col">Id</th>      
+                <th scope="col">Usuário</th>
+                <th scope="col">E-mail</th>
             </tr>
         </thead>
         <tbody> 
@@ -33,5 +32,5 @@
             @endforeach    
         </tbody>
     </table>
-
+</div>
 @endsection
