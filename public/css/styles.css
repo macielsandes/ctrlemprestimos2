@@ -23,3 +23,12 @@
   .selector-for-some-widget {
     box-sizing: content-box;
   }
+/* Estilo que permite mudança de tela no CSs*/
+  .custom-class {
+    display: none;
+  }
+  @include media-breakpoint-up(sm) {
+    .custom-class {
+      display: block;
+    }
+  }
