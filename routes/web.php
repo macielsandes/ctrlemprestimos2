@@ -4,7 +4,7 @@ use App\Http\Controllers\{
     UsersController,
     MaterialsController,
     RegistersController,
-    HomeController
+    indexController
 };
 
 use Illuminate\Support\Facades\Route;
@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', [HomeController::class, 'index'])-> name('home');
+Route::get('/index', [IndexController::class, 'index'])-> name('index');
 
 Route::delete('/users/{id}',[UsersController::class, 'destroy']) -> name('users.destroy');
 Route::put('/users/{id}',[UsersController::class, 'update']) -> name('users.update');

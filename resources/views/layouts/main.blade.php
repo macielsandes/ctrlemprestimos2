@@ -17,7 +17,9 @@
     	
     <!--Meu CSS do projeto-->
     <link rel="stylesheet" href="css/styles.css">      
-        
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/headers.css" >  
+    
     <title>@yield('title') - Controle de Empréstimos</title>
 </head>
 <body>
@@ -28,12 +30,11 @@
         <a class="navbar-brand" href="/home">CTRL EMPRÉSTIMOS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        
+        </button>        
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/index">Pagina Inicial</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" href="/users">Usuários</a>
@@ -45,15 +46,21 @@
                     <a class="nav-link active" href="/registers">Registrar</a>
                   </li>                  
                 </ul>                
-              </div>
-              <!--Div da barra de pesquisa-->
-            </div>
-                <form class="d-flex action="{{ route('materials.index') }}" method="get">                  
-                    <input class="form-control me-2" type="search" name ="pesquisar" placeholder="Pesquisar" aria-label="pesquisar">
-                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                </form>
-            </nav>    
-        </div>
+              </div>            
+              
+         </div>     
+         <!--Define um tipo de perfil para o usuario-->
+          <div class="dropdown text-end">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>     
+      
+      </div>
+            
     </nav>    
 
 <main>
@@ -61,9 +68,10 @@
     <div class="container-fluid">
         @yield('content') 
     </div>      
-  <!--Fim do Corpo das paginas-->
+  
+    <!--Fim do Corpo das paginas-->
 </main> 
-     <!--Define o Rodape da pagina-->    
+     <!--Define a Footer da pagina-->    
     <div class="container-fluid">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <p class="col-md-4 mb-0 text-muted">CTRL EMPRÉSTIMOS; 2022</p>

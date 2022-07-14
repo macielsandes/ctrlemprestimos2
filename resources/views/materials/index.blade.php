@@ -6,16 +6,19 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-8">
+        <div class="col-6">
             <h2>Listagem de materiais (<a href="{{ route('materials.create') }}">+</a>)</h2>
         </div>
-        <div class="col-4">
-                <form action="{{ route('materials.index') }}" method="get">
-                    <input type="text" name ="search" placeholder="Pesquisar">  
-                    <button>Pesquisar</button>
-                </form>
+        <!--Div da barra de pesquisa-->
+           <div class="col-5">
+                    <form action="{{ route('materials.index') }}" method="get">
+                        <input class="form-control me-2" type="search" name ="search" placeholder="Pesquisar" aria-label="pesquisar">
+                        <!--<input type="text" name ="search" placeholder="Pesquisar"> -->
+                        <button class="btn btn-outline-success" type="submit">Pesquisar</button>                     
+                    </form>
+            </div>
         </div>
-    </div>   
+    </div>       
 </div>
 
 <!--Inicio da Tabela-->
