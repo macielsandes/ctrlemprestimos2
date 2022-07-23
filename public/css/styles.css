@@ -32,3 +32,13 @@
       display: block;
     }
   }
+
+/*CSS para mudança para organizacao botao*/
+  div.absolute {
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+    border: 3px solid #8AC007;
+  }
+
+  
