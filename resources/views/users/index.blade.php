@@ -4,55 +4,69 @@
 
 @section('content')
 
-<div class="container">
-    <h1>Usuários</h1>
-</div> 
+<div class="container mt-3">
+    <h2>Usuários</h2>   
 
-<div class="container-fluid">      
-        <div class="row">   
-            <!--Div da barra de pesquisa-->     
-            <div class="col-sm-8 text-center">                          
-                <form action="{{ route('users.index') }}" method="get">
-                    <input class="form-control me-2" type="search" name ="search" placeholder="Pesquisar" aria-label="pesquisar">
-                     <!--<input type="text" name ="search" placeholder="Pesquisar"> -->
-                        <button class="btn btn-primary" type="submit">Pesquisar</button>                     
+    <div class="container mt-5">      
+            <div class="row d-flex bd-highlight">              
+                <!--Botao para cadastro de novo usuario-->          
+                <div class="col">          
+                    <a class="btn btn-primary" href="{{ route('users.create') }}" role="button">Novo Usuario</a>          
+                </div>  
+                
+                <!--Div da barra de pesquisa-->     
+                <div class="col">                          
+                    <form class="ms-auto p-2 bd-highlight" action="{{ route('users.index') }}" method="get">
+                        <input class="form-control me-2" type="search" name ="search" placeholder="Pesquisar" aria-label="Pesquisar">                        
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>                     
                     </form>
+                </div>
             </div>
-             <!--Botao para novo cadastro-->          
-            <div class="col-sm-4">          
-                <a class="btn btn-primary" href="{{ route('users.create') }}" role="button">Novo</a>          
-            </div>
-        </div>            
-</div>
+    </div>
     
-<div class="container-fluid">
-        <div class="table-responsive">
-            <table class="table table-striped">
-                    <thead class="table-dark">
-                        <tr>
-                                    <th scope="col">Id</th>      
-                                    <th scope="col">Usuário</th>
-                                    <th scope="col">E-mail</th>
-                                    <th scope="col"></th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody> 
-                                @foreach ( $users as $user )                           
-                                <tr> 
-                                    <td> {{ $user->id }}</td>               
-                                    <td> {{ $user->name }}</td>
-                                    <td> {{ $user->email }}</td>
-                                    <td> <a href="{{ route('users.edit', $user->id) }}">Editar></a> </td> 
-                                    <td> <a href="{{ route('users.show', $user->id) }}">Excluir</a> </td>
-                                </tr>
-                                @endforeach    
-                            </tbody>
-                    </table>
-                </div>   
-            </div>
-            </div>
-        </table>
-</div>
+    <div class="table-responsive mt-5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>      
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>            
+                        <th scope="col"></th>
+                        <th scope="col"></th>                                    
+                    </tr>
+                </thead>
+                    <tbody> 
+                        @foreach ( $users as $user )                           
+                        <tr> 
+                            <td> {{ $user->id }}</td>               
+                            <td> {{ $user->name }}</td>
+                            <td> {{ $user->email }}</td>
+                            <td> Vazio</td> 
+                            <td> Vazio</td>                           
+                            <td>                               
+                                <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}" role="button">Editar</a> 
+                            </td> 
+                            <td> 
+                                <a class="btn btn-primary" href="{{ route('users.show', $user->id) }}" role="button">Remover</a> 
+                            </td>
+                        </tr>
+                        @endforeach    
+                    </tbody>
+            </table>
+    </div>
+    <div class="container mt-6">
+        <ul class="pagination  justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+          </ul>
+    </div>
+
+</div>    
 
 @endsection

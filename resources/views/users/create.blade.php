@@ -6,18 +6,15 @@
 
 @include('includes.validations-form')
 
-<div class="container">
+<div class="container mt-3">
     <div class="row">                
-        <div class="col-6">
-            <div class="card">
+        <div class="col-6">            
                 </div class="card-body"> 
-                    <h4>Novo Usuário</h4>
-                
+                    <h1>Novo usuário</h1>                
                     <form action="{{ route('users.store') }}" method="post">
                         @csrf
                         @include('users._partials.form')
-                    </form>
-                </div>    
+                    </form>  
             </div>
         </div>
     </div>

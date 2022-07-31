@@ -11,8 +11,10 @@
     <div class="form-select form-select-lg mb-3">
       <label for="qty" class="form-label">Quantidade:</label>
       <input class="form-control" type="number" name="qty" placeholder="1" value="{{ $material->qty ?? old ('qty')}}">  
-    </div>
+    </div>   
+
     <div class="form-select form-select-lg mb-3">    
         <button type="submit" class="btn btn-secondary">Enviar</button>
     </div> 
+
 </div>   
