@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Requests\StoreUpdateUsersFormRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     protected $model;
 
@@ -43,7 +42,7 @@ class UsersController extends Controller
        return view('users.create'); 
     }
     
-    //Enviando dados cadastrados para o banco de dados
+    //Enviando dados do formulario para o banco de dados
     public function store(StoreUpdateUsersFormRequest $request)
     {   
         //Recebe todos dados do formulario, porem uma verificação propria de criptografa no campo senha
@@ -88,5 +87,4 @@ class UsersController extends Controller
 
         return redirect() -> route('users.index');
     }
-
 }

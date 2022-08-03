@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\{
-    UsersController,
-    MaterialsController,
-    RegistersController,
+    UserController,
+    MaterialController,
+    RegisterController,
     indexController
 };
 
@@ -22,24 +22,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/index', [IndexController::class, 'index'])-> name('index');
 
-Route::delete('/users/{id}',[UsersController::class, 'destroy']) -> name('users.destroy');
-Route::put('/users/{id}',[UsersController::class, 'update']) -> name('users.update');
-Route::get('/users/{id}/edit',[UsersController::class, 'edit']) -> name('users.edit');
-Route::get('/users', [UsersController::class, 'index'])-> name('users.index');
-Route::get('/users/create', [UsersController::class, 'create']) -> name('users.create');
-Route::post('/users', [UsersController::class, 'store']) -> name('users.store');
-Route::get('/users/{id}', [UsersController::class, 'show'])-> name('users.show');
+Route::delete('/user/{id}',[UserController::class, 'destroy']) -> name('users.destroy');
+Route::put('/user/{id}',[UserController::class, 'update']) -> name('users.update');
+Route::get('/user/{id}/edit',[UserController::class, 'edit']) -> name('users.edit');
+Route::get('/user', [UserController::class, 'index'])-> name('users.index');
+Route::get('/user/create', [UserController::class, 'create']) -> name('users.create');
+Route::post('/user', [UserController::class, 'store']) -> name('users.store');
+Route::get('/user/{id}', [UserController::class, 'show'])-> name('users.show');
 
 
-Route::delete('/materials{id}',[MaterialsController::class, 'destroy']) -> name('materials.destroy');
-Route::put('/materials/{id}',[MaterialsController::class, 'update']) -> name('materials.update');
-Route::get('/materials/{id}/edit', [MaterialsController::class, 'edit'])-> name('materials.edit');
-Route::get('/materials', [MaterialsController::class, 'index'])-> name('materials.index');
-Route::get('/materials/create', [MaterialsController::class, 'create'])-> name('materials.create');
-Route::post('/materials', [MaterialsController::class, 'store'])-> name('materials.store');
-Route::get('/materials/{id}', [MaterialsController::class, 'show'])-> name('materials.show');
+Route::delete('/material{id}',[MaterialController::class, 'destroy']) -> name('materials.destroy');
+Route::put('/material/{id}',[MaterialController::class, 'update']) -> name('materials.update');
+Route::get('/material/{id}/edit', [MaterialController::class, 'edit'])-> name('materials.edit');
+Route::get('/material', [MaterialController::class, 'index'])-> name('materials.index');
+Route::get('/material/create', [MaterialController::class, 'create'])-> name('materials.create');
+Route::post('/material', [MaterialController::class, 'store'])-> name('materials.store');
+Route::get('/material/{id}', [MaterialController::class, 'show'])-> name('materials.show');
 
-Route::get('/registers', [RegistersController::class, 'index'])-> name('registers.index');
+Route::get('/register', [RegistersController::class, 'index'])-> name('registers.index');
 
 Route::get('/', function () {
     return view('welcome');

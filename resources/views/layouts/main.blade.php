@@ -55,13 +55,13 @@
                   <a class="nav-link" aria-current="page" href="/index">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/users">Usuários</a>
+                  <a class="nav-link" href="/user">Usuários</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/materials">Materiais</a>
+                  <a class="nav-link" href="/material">Materiais</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/registers">Registrar</a>
+                  <a class="nav-link" href="/register">Registrar</a>
               </li>                  
             </ul>
             

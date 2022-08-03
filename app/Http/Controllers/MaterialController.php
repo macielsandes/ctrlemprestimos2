@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Material;
 use Illuminate\Http\Request;
 
-class MaterialsController extends Controller
+class MaterialController extends Controller
 {
     protected $model;
 

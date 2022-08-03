@@ -9,14 +9,13 @@ class Material extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['description', 'numberserie', 'numberassets', 'qty'];
+    protected $fillable = ['name', 'description','qty'];
 
     public function getMaterials(string|null $search = null)
     {
        $materials = $this->where(function ($query) use ($search){
             if ($search){
-                $query->where('numberassets', $search);
-                $query->orwhere('description', 'LIKE', "%{$search}%");
+                $query->where('descriptions', $search);                
             }
         })->get();    
 
