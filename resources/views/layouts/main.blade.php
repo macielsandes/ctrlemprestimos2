@@ -11,11 +11,9 @@
     <!-- CSS Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
             rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-       	
+          	
     <!--Meu CSS do projeto-->
-    <link rel="stylesheet" href="/css/styles.css">      
-      
+    <link rel="stylesheet" href="/css/styles.css">        
     
     <title>@yield('title') - Controle de Empréstimos</title>
 </head>
@@ -43,31 +41,33 @@
       </div>
     </header>
     
+    <div class="container">
     <!--Barra de Navegacao-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-md"> 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-         </button>            
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="/index">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/user">Usuários</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/material">Materiais</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/register">Registrar</a>
-              </li>                  
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">       
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>>         
             
-          </div>
-  </div>
-  
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                  <li class="nav-item active">
+                    <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="/user">Usuários</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/material">Materiais</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/register">Registrar</a>
+                  </li>                  
+              </ul>              
+            </div>
+        </div>
+    </nav>
+  </div>  
+    <!--Fim da barro de Navegação-->
             
           </div>
       </div>      
@@ -93,7 +93,9 @@
       
     <!--Fim definição rodapé-->    
     <!-- JavaScript do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Fim do javaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>  
 </body>
 </html>
