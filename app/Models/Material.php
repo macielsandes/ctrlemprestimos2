@@ -9,17 +9,22 @@ class Material extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description','qty'];
+    protected $fillable = ['nameidentification ', 'description','qty', 'qrcode'];
 
     public function getMaterials(string|null $search = null)
     {
        $materials = $this->where(function ($query) use ($search){
             if ($search){
-                $query->where('descriptions', $search);                
+                $query->where('nameidentification', $search);                
             }
         })->get();    
 
         return $materials;
+    }
+
+    public function Material()
+    {
+        return $this->hasMany(Comment::class);
     }
 
 }

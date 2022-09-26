@@ -3,7 +3,9 @@
 @section('title', 'Home')
 
 @section('content')
-
+<div>
+  <Section> Olá!Seja bem vindo.</Section>
+</div>
 <div class="row">
   <div class="container pt-5"></div>
   <div class="card" style="width: 18rem;">

@@ -30,7 +30,6 @@ Route::get('/user/create', [UserController::class, 'create']) -> name('users.cre
 Route::post('/user', [UserController::class, 'store']) -> name('users.store');
 Route::get('/user/{id}', [UserController::class, 'show'])-> name('users.show');
 
-
 Route::delete('/material{id}',[MaterialController::class, 'destroy']) -> name('materials.destroy');
 Route::put('/material/{id}',[MaterialController::class, 'update']) -> name('materials.update');
 Route::get('/material/{id}/edit', [MaterialController::class, 'edit'])-> name('materials.edit');

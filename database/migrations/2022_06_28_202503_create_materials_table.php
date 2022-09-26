@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('materials', function (Blueprint $table) {
             $table->id();
-            $table->string('nameidentificacao')-> unique();   
-            $table->text('descricao');
-            $table->integer('qtde');
-            $table->string('qrcode');
+            $table->string('nameidentification', 100)-> unique();   
+            $table->text('description');
+            $table->integer('qty')-> default(1);
+            $table->string('qrcode')->nullable();
             $table->timestamps();
         });
     }

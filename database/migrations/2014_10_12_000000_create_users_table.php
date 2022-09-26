@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
+            $table->string('name', 100);
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('senha');
-            /** Falta cria a parte de definição de perfil*/
+            $table->timestamp('email_verifihphed_at')->nullable();
+            $table->string('password');            
+            /**Define se o usuario é administrador ou não*/
+            /**$table->boolean('perfil');*/
             $table->rememberToken();
             $table->timestamps();
         });

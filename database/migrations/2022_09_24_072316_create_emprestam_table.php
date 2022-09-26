@@ -13,10 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('materials_users', function (Blueprint $table) {
-            $table->foreachId('materials_id')->Constrained();
-            $table->foreachId('users_id');
-            $table->
+        Schema::create('emprestam', function (Blueprint $table) {
+            $table->foreighId('User_id')->constrained(user_id)
             $table->id();
             $table->timestamps();
         });
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materials_users');
+        Schema::dropIfExists('emprestam');
     }
 };

@@ -28,8 +28,7 @@ class UserController extends Controller
     
     //controle para mostrar usuario
     public function show($id)
-    {
-        //$user = User::where ('id',$id) ->first();
+    {       
         if(!$user= User::find($id))
            return redirect() -> route('users.index');
 
@@ -45,7 +44,7 @@ class UserController extends Controller
     //Enviando dados do formulario para o banco de dados
     public function store(StoreUpdateUsersFormRequest $request)
     {   
-        //Recebe todos dados do formulario, porem uma verificação propria de criptografa no campo senha
+        //Recebendo todos dados do formulario, porem uma verificação propria de criptografa no campo senha
         $data = $request->all(); 
         $data['password'] = bcrypt($request->password);
         
