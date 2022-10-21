@@ -22,9 +22,10 @@ class Material extends Model
         return $materials;
     }
 
-    public function Material()
+    public function User()
     {
-        return $this->hasMany(Comment::class);
+        return $this->BelongsTo(User::class, 'id_user', 'id');
     }
+    
 
 }

@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('emprestam', function (Blueprint $table) {
-            $table->foreighId('User_id')->constrained(user_id)
-            $table->id();
+            $table->foreighId('User_id')->constrained(user_id);
             $table->timestamps();
         });
     }
@@ -28,5 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('emprestam');
+        $table->foreighId('User_id')
+        ->constrained(user_id);
+        ->onDelete('cascade');
     }
 };

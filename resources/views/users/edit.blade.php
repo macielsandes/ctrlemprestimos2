@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.default')
 
 @section('title', "Editar o Usuário {$user->name}")
 

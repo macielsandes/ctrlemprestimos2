@@ -1,12 +1,15 @@
-@extends('layouts.main')
+@extends('layouts.default')
 
 @section('title', 'Home')
 
 @section('content')
-<div>
-  <Section> Olá!Seja bem vindo.</Section>
-</div>
-<div class="row">
+
+<div class="row">          
+  <div class="col">
+    <div>
+      <Section> Olá!Seja bem vindo.</Section>
+    </div>
+  <div class="row">
   <div class="container pt-5"></div>
   <div class="card" style="width: 18rem;">
       <img src="..." class="card-img-top" alt="...">
@@ -34,6 +37,7 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
+  </div>
   </div>
 </div>
   
