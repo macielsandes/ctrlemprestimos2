@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Listagem de materiais')
+@section('title', 'Cadastrar material')
 
 @section('content')
     <div class="container-fluid">
