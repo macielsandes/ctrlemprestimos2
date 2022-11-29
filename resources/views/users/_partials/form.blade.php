@@ -36,7 +36,7 @@
       </fieldset> 
 
     <div class="form-group mb-3">
-        <button type="submit" class="btn btn-secondary"> Enviar</button>
+        <button type="submit" class="btn btn-secondary">Enviar</button>
     </div>    
  <!--Forms de cadastro de usuario-->   
 </div>

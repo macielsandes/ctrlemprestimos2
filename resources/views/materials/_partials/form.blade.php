@@ -1,7 +1,6 @@
 @csrf   
   <!--Forms de cadastro de Material-->
-<div class="container border">  
-    
+<div class="container border">     
   <div class="form-group mb-3">
       <label for="nameidentification" class="form-label">Nome de identificação: </label>
       <input class="form-control" type="text" name="name" id="name" placeholder="Nome de identificação" 

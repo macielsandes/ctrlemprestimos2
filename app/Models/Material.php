@@ -9,7 +9,7 @@ class Material extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nameidentification ', 'description','qty', 'qrcode'];
+    protected $fillable = ['nameidentification', 'description','qty', 'qrcode'];
 
     public function getMaterials(string|null $search = null)
     {
@@ -24,7 +24,7 @@ class Material extends Model
 
     public function User()
     {
-        return $this->BelongsTo(User::class, 'id_user', 'id');
+        return $this->BelongsTo(User::class);
     }
     
 

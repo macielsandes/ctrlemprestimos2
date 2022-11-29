@@ -38,7 +38,7 @@ Route::get('/material/create', [MaterialController::class, 'create'])-> name('ma
 Route::post('/material', [MaterialController::class, 'store'])-> name('materials.store');
 Route::get('/material/{id}', [MaterialController::class, 'show'])-> name('materials.show');
 
-Route::get('/register', [RegistersController::class, 'index'])-> name('registers.index');
+Route::get('/register', [RegisterController::class, 'index'])-> name('registers.index');
 
 Route::get('/', function () {
     return view('welcome');

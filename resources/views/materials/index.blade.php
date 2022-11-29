@@ -1,11 +1,8 @@
 @extends('layouts.default')
 
-@section('title', 'Listagem de materiais')
+@section('title', 'Lista de materiais')
 
 @section('content')
-
-    <div class="container-fluid">
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -41,7 +38,6 @@
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <caption>Materiais</caption>
-
                                 <thead class="table-dark">
                                     <tr>
                                         <th scope="col">Id</th>
@@ -83,8 +79,6 @@
                                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
                             </ul>
                         </div>
-
-
                     </div>
                 </div>
             </div>
