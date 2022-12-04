@@ -2,7 +2,7 @@
   <!--Forms de cadastro de Material-->
 <div class="container border">     
   <div class="form-group mb-3">
-      <label for="nameidentification" class="form-label">Nome de identificação: </label>
+      <label for="nameidentification" class="form-label">Nome de identificação:</label>
       <input class="form-control" type="text" name="name" id="name" placeholder="Nome de identificação" 
         value="{{ $material->nameidentification ?? old('nameidentification') }}">
     </div>    
@@ -16,8 +16,8 @@
       <input class="form-control" type="number" name="qty" placeholder="1" value="{{$material->qty ?? old ('qty')}}">  
     </div>   
     <div class="form-group mb-3">
-      <label for="qty" class="form-label">Qrcode</label>
-      <input class="form-control" type="number" name="qrcode"  value="{{ $material->qrcode ?? old ('qrcode')}}">  
+      <label for="qty" class="form-label">Qrcode:</label>
+      <input class="form-control" type="text" name="qrcode"  value="{{ $material->qrcode ?? old ('qrcode')}}">  
     </div> 
     <div class="form-group mb-3">    
         <button type="submit" class="btn btn-secondary">Salvar</button>

@@ -5,6 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Material;
 use Illuminate\Http\Request;
 
+/**
+ * This class controls all actions related to material for
+ * the CTRLEmprestimos application.
+ *
+ * @version    v1.0
+ * @author [Maciel Sandes] [<snipe@snipe.net>]
+ */
+
 class MaterialController extends Controller
 {
     protected $model;

@@ -22,10 +22,10 @@ class Material extends Model
         return $materials;
     }
 
-    public function User()
+    /*public function User()
     {
         return $this->BelongsTo(User::class);
-    }
+    }*/
     
 
 }
